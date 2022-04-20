@@ -7,6 +7,12 @@ We collected Pcaps and encrypted TLS traffic captures of all our experiments we 
 
 If you are interested in our dataset, please send a mail to franzen [AT] sec.in.tum.de.
 
-## Tools
+## How to use our tools
 
-to be described
+Our scanners are supposed to be used with the ZMap internet scanner. Therefore, to perform a scan for RDP or SMB honeypots you can e.g. perform the follwoing command:
+
+    zmap -p 3359 | python3 RDP_scan_asyncio.py
+
+or
+
+    zmap -p 445 | python3 SMB_scan_asyncio.py
